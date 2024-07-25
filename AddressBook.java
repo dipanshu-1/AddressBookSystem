@@ -29,19 +29,6 @@ public class AddressBook {
 
         list.add(newContact);
     }
-
-    public Contacts read(String name){
-        System.out.println("read file");
-        for(Contacts gg:list) {
-            if (Objects.equals(gg.firstName, name) || Objects.equals(gg.lastName, name)) {
-                System.out.println("found");
-                return gg;
-            }
-        }
-
-            Contacts n=new Contacts();
-            return n;
-
     }
 
-}
+
