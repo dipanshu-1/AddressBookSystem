@@ -41,6 +41,18 @@ public class AddressBook {
         if(!fl)
             System.out.println("Given name is not there in Database");
     }
+
+    public void delete(String name){
+        boolean fl=false;
+        for(Contacts gg:list) {
+            if (Objects.equals(gg.firstName, name) || Objects.equals(gg.lastName, name)) {
+                list.remove(gg);
+                System.out.println("Deleted!");
+            }
+        }
+        if(!fl)
+            System.out.println("There is no file having name : "+name);
+    }
     }
 
 
