@@ -29,6 +29,18 @@ public class AddressBook {
 
         list.add(newContact);
     }
+
+    public void read(String name){
+        boolean fl=false;
+        for(Contacts gg:list) {
+            if (Objects.equals(gg.firstName, name) || Objects.equals(gg.lastName, name)) {
+                System.out.println(gg);
+                fl=true;
+            }
+        }
+        if(!fl)
+            System.out.println("Given name is not there in Database");
+    }
     }
 
 
