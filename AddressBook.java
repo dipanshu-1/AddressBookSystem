@@ -10,7 +10,20 @@ public class AddressBook {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your First Name");
-        newContact.firstName=sc.nextLine();
+        String name=sc.nextLine();
+        newContact.firstName=name;
+        Boolean fl=false;
+        for(Contacts gg:list) {
+            if (Objects.equals(gg.firstName, name) ) {
+                System.out.println("User having this name already exists: ");
+                System.out.println("Please re try with other Name");
+                fl=true;
+               break;
+            }
+        }
+        if(fl)
+            return;
+
         System.out.println("Enter your Last Name");
         newContact.lastName= sc.nextLine();
         System.out.println("Enter your Address");
